@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vehicle", "src\Services\Vehicle\Vehicle.csproj", "{5BA7F470-2F25-4E68-9648-DD8BFE0F125B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dealer", "src\Services\Dealer\Dealer.csproj", "{E66BFABC-027A-4C16-8875-18306720DFF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vehicle", "src\Services\Vehicle\Vehicle.csproj", "{C7E61228-26D9-461E-AA99-3B7015A14A85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,13 +10,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5BA7F470-2F25-4E68-9648-DD8BFE0F125B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5BA7F470-2F25-4E68-9648-DD8BFE0F125B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5BA7F470-2F25-4E68-9648-DD8BFE0F125B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5BA7F470-2F25-4E68-9648-DD8BFE0F125B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E66BFABC-027A-4C16-8875-18306720DFF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E66BFABC-027A-4C16-8875-18306720DFF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E66BFABC-027A-4C16-8875-18306720DFF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E66BFABC-027A-4C16-8875-18306720DFF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7E61228-26D9-461E-AA99-3B7015A14A85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7E61228-26D9-461E-AA99-3B7015A14A85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7E61228-26D9-461E-AA99-3B7015A14A85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7E61228-26D9-461E-AA99-3B7015A14A85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
