@@ -2,7 +2,7 @@ using System;
 
 namespace Vehicle
 {
-    public class WeatherForecast
+    public class Vehicle
     {
         public DateTime Date { get; set; }
 
