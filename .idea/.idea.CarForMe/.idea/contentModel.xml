@@ -33,8 +33,20 @@
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Constants.cs" t="Include" />
         <e p="Controllers" t="Include">
           <e p="VehicleController.cs" t="Include" />
+          <e p="VehicleFipeController.cs" t="Include" />
+        </e>
+        <e p="IRequestUtils.cs" t="Include" />
+        <e p="Managers" t="Include">
+          <e p="IVehicleFipeManager.cs" t="Include" />
+          <e p="VehicleFipeManager.cs" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="FipeBrand.cs" t="Include" />
+          <e p="FipeVehicle.cs" t="Include" />
+          <e p="FipeVehicleExcerpt.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -47,6 +59,7 @@
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
         </e>
+        <e p="RequestUtils.cs" t="Include" />
         <e p="Startup.cs" t="Include" />
         <e p="Vehicle.cs" t="Include" />
         <e p="Vehicle.csproj" t="IncludeRecursive" />
