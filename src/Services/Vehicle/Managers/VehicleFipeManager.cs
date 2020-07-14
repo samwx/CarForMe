@@ -32,5 +32,19 @@ namespace Vehicle.Managers
 
             return vehicles.ToArray();
         }
+
+        public async Task<FipeVehicleModel[]> GetVehicleByBrand(int brandId, int vehicleId)
+        {
+            var request = new RequestUtils<FipeVehicleModel[]>(_clientFactory);
+            var vehicles = await request.GetRequest(String.Format(Constants.FipeApiUrlBase, $"carros/veiculo/{brandId}/{vehicleId}"));
+
+            return vehicles.ToArray();
+        }
+
+        public async Task<FipeVehicle> GetVehicleDetail(int brandId, int vehicleId, string vehicleModel)
+        {
+            var request = new RequestUtils<FipeVehicle>(_clientFactory);
+            return await request.GetRequest(String.Format(Constants.FipeApiUrlBase, $"carros/veiculo/{brandId}/{vehicleId}/{vehicleModel}"));
+        }
     }
 }

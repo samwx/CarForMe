@@ -5,9 +5,7 @@ namespace Vehicle.Models
 {
     public class FipeVehicle
     {
-        private float _normalizedPrice;
-        
-        public int Id { get; set; }
+        public string Id { get; set; }
         
         [JsonProperty("ano_modelo")]
         public int YearModel { get; set; }
@@ -20,12 +18,6 @@ namespace Vehicle.Models
 
         [JsonProperty("preco")]
         public string Price { get; set; }
-
-        public float NormalizedPrice
-        {
-            get => float.Parse(Price.Replace("R$", "").Trim());
-            set => _normalizedPrice = value;
-        }
         
         [JsonProperty("combustivel")]
         public string Fuel { get; set; }

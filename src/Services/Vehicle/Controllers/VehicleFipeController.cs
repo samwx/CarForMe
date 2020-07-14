@@ -12,7 +12,7 @@ namespace Vehicle.Controllers
 {
     [ApiController]
     [Route("api/fipe")]
-    public class VehicleFipeController : ControllerBase
+    public class VehicleFipeController : ControllerBase, IVehicleFipeManager
     {
         private readonly IVehicleFipeManager _vehicleFipeManager;
 
@@ -22,16 +22,27 @@ namespace Vehicle.Controllers
         }
             
         [HttpGet("brands")]
-        public async Task<FipeBrand[]> Get()
+        public async Task<FipeBrand[]> GetBrands()
         {
             return await _vehicleFipeManager.GetBrands();
-            
         }
 
         [HttpGet("brands/vehicles/{brandId}")]
-        public async Task<FipeVehicleExcerpt[]> GetVehicle(int brandId)
+        public async Task<FipeVehicleExcerpt[]> GetVehiclesByBrand(int brandId)
         {
             return await _vehicleFipeManager.GetVehiclesByBrand(brandId);
+        }
+
+        [HttpGet("brands/vehicles/{brandId}/{vehicleId}")]
+        public async Task<FipeVehicleModel[]> GetVehicleByBrand(int brandId, int vehicleId)
+        {
+            return await _vehicleFipeManager.GetVehicleByBrand(brandId, vehicleId);
+        }
+
+        [HttpGet("brands/vehicles/{brandId}/{vehicleId}/{vehicleModel}")]
+        public async Task<FipeVehicle> GetVehicleDetail(int brandId, int vehicleId, string vehicleModel)
+        {
+            return await _vehicleFipeManager.GetVehicleDetail(brandId, vehicleId, vehicleModel);
         }
     }
 }
