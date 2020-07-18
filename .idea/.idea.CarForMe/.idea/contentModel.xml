@@ -7,18 +7,24 @@
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="CarForMe.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />
-      <e p="src/Services/Dealer" t="IncludeRecursive">
+      <e p="src/Services/DealerAPI" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="WeatherForecastController.cs" t="Include" />
         </e>
-        <e p="Dealer.csproj" t="IncludeRecursive" />
+        <e p="Data" t="Include">
+          <e p="CarForMeDbContext.cs" t="Include" />
+        </e>
+        <e p="DealerAPI.csproj" t="IncludeRecursive" />
+        <e p="Domain" t="Include">
+          <e p="Dealer.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
-              <e p="Dealer.AssemblyInfo.cs" t="Include" />
+              <e p="DealerAPI.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
@@ -26,33 +32,32 @@
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
         </e>
+        <e p="Repository" t="Include">
+          <e p="DealerRepository.cs" t="Include" />
+          <e p="IRepository.cs" t="Include" />
+        </e>
         <e p="Startup.cs" t="Include" />
         <e p="WeatherForecast.cs" t="Include" />
       </e>
-      <e p="src/Services/Vehicle" t="IncludeRecursive">
+      <e p="src/Services/VehicleAPI" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Constants.cs" t="Include" />
         <e p="Controllers" t="Include">
-          <e p="VehicleController.cs" t="Include" />
           <e p="VehicleFipeController.cs" t="Include" />
         </e>
-        <e p="IRequestUtils.cs" t="Include" />
-        <e p="Managers" t="Include">
-          <e p="IVehicleFipeManager.cs" t="Include" />
-          <e p="VehicleFipeManager.cs" t="Include" />
-        </e>
-        <e p="Models" t="Include">
+        <e p="Domain" t="Include">
           <e p="FipeBrand.cs" t="Include" />
           <e p="FipeVehicle.cs" t="Include" />
           <e p="FipeVehicleExcerpt.cs" t="Include" />
           <e p="FipeVehicleModel.cs" t="Include" />
         </e>
+        <e p="IRequestUtils.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
-              <e p="Vehicle.AssemblyInfo.cs" t="Include" />
+              <e p="VehicleAPI.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
@@ -60,10 +65,13 @@
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
         </e>
+        <e p="Repository" t="Include">
+          <e p="IVehicleFipeRepository.cs" t="Include" />
+          <e p="VehicleFipeRepository.cs" t="Include" />
+        </e>
         <e p="RequestUtils.cs" t="Include" />
         <e p="Startup.cs" t="Include" />
-        <e p="Vehicle.cs" t="Include" />
-        <e p="Vehicle.csproj" t="IncludeRecursive" />
+        <e p="VehicleAPI.csproj" t="IncludeRecursive" />
       </e>
     </e>
   </component>

@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dealer", "src\Services\Dealer\Dealer.csproj", "{E66BFABC-027A-4C16-8875-18306720DFF4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DealerAPI", "src\Services\DealerAPI\DealerAPI.csproj", "{E66BFABC-027A-4C16-8875-18306720DFF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vehicle", "src\Services\Vehicle\Vehicle.csproj", "{B79B8292-126B-4590-93EB-DCFE9F1EB62F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleAPI", "src\Services\VehicleAPI\VehicleAPI.csproj", "{B79B8292-126B-4590-93EB-DCFE9F1EB62F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
