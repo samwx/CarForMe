@@ -1,18 +1,16 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
-using System.Text.Json;
 using System.Threading.Tasks;
-using Vehicle.Models;
+using VehicleAPI.Domain;
 
-namespace Vehicle.Managers
+namespace VehicleAPI.Repository
 {
-    public class VehicleFipeManager : IVehicleFipeManager
+    public class VehicleFipeRepository : IVehicleFipeRepository
     {
         private IHttpClientFactory _clientFactory;
 
-        public VehicleFipeManager(IHttpClientFactory clientFactory)
+        public VehicleFipeRepository(IHttpClientFactory clientFactory)
         {
             _clientFactory = clientFactory;
         }

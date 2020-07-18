@@ -1,4 +1,4 @@
-namespace Vehicle
+namespace VehicleAPI
 {
     public class Constants
     {

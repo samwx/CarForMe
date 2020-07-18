@@ -5,44 +5,44 @@ using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Vehicle.Managers;
-using Vehicle.Models;
+using VehicleAPI.Domain;
+using VehicleAPI.Repository;
 
-namespace Vehicle.Controllers
+namespace VehicleAPI.Controllers
 {
     [ApiController]
     [Route("api/fipe")]
-    public class VehicleFipeController : ControllerBase, IVehicleFipeManager
+    public class VehicleFipeController : ControllerBase, IVehicleFipeRepository
     {
-        private readonly IVehicleFipeManager _vehicleFipeManager;
+        private readonly IVehicleFipeRepository _vehicleFipeRepository;
 
-        public VehicleFipeController(IVehicleFipeManager vehicleFipeManager)
+        public VehicleFipeController(IVehicleFipeRepository vehicleFipeRepository)
         {
-            _vehicleFipeManager = vehicleFipeManager;
+            _vehicleFipeRepository = vehicleFipeRepository;
         }
             
         [HttpGet("brands")]
         public async Task<FipeBrand[]> GetBrands()
         {
-            return await _vehicleFipeManager.GetBrands();
+            return await _vehicleFipeRepository.GetBrands();
         }
 
         [HttpGet("brands/vehicles/{brandId}")]
         public async Task<FipeVehicleExcerpt[]> GetVehiclesByBrand(int brandId)
         {
-            return await _vehicleFipeManager.GetVehiclesByBrand(brandId);
+            return await _vehicleFipeRepository.GetVehiclesByBrand(brandId);
         }
 
         [HttpGet("brands/vehicles/{brandId}/{vehicleId}")]
         public async Task<FipeVehicleModel[]> GetVehicleByBrand(int brandId, int vehicleId)
         {
-            return await _vehicleFipeManager.GetVehicleByBrand(brandId, vehicleId);
+            return await _vehicleFipeRepository.GetVehicleByBrand(brandId, vehicleId);
         }
 
         [HttpGet("brands/vehicles/{brandId}/{vehicleId}/{vehicleModel}")]
         public async Task<FipeVehicle> GetVehicleDetail(int brandId, int vehicleId, string vehicleModel)
         {
-            return await _vehicleFipeManager.GetVehicleDetail(brandId, vehicleId, vehicleModel);
+            return await _vehicleFipeRepository.GetVehicleDetail(brandId, vehicleId, vehicleModel);
         }
     }
 }

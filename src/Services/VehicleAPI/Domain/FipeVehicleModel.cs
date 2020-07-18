@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace Vehicle.Models
+namespace VehicleAPI.Domain
 {
     public class FipeVehicleModel
     {

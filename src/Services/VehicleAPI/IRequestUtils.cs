@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace Vehicle
+namespace VehicleAPI
 {
     public interface IRequestUtils<T>
     {

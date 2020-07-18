@@ -1,9 +1,9 @@
 using System.Threading.Tasks;
-using Vehicle.Models;
+using VehicleAPI.Domain;
 
-namespace Vehicle.Managers
+namespace VehicleAPI.Repository
 {
-    public interface IVehicleFipeManager
+    public interface IVehicleFipeRepository
     {
         public Task<FipeBrand[]> GetBrands();
         public Task<FipeVehicleExcerpt[]> GetVehiclesByBrand(int id);

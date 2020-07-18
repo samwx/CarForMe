@@ -1,6 +1,6 @@
 using System;
 
-namespace Dealer
+namespace DealerAPI
 {
     public class WeatherForecast
     {

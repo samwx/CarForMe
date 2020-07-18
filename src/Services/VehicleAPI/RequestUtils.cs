@@ -1,12 +1,9 @@
 using System;
 using System.Net.Http;
-using System.Text.Json;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using Vehicle.Models;
-using JsonSerializer = Newtonsoft.Json.JsonSerializer;
 
-namespace Vehicle
+namespace VehicleAPI
 {
     public class RequestUtils<T> : IRequestUtils<T>
     {
