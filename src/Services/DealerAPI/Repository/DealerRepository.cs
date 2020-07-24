@@ -1,34 +1,56 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using DealerAPI.Data;
 using DealerAPI.Domain;
+using Microsoft.EntityFrameworkCore;
 
 namespace DealerAPI.Repository
 {
     public class DealerRepository : IRepository<Dealer>
     {
-        public Task<List<Dealer>> GetAll()
+        private readonly CarForMeDbContext _context;
+
+        public DealerRepository(CarForMeDbContext context)
         {
-            throw new System.NotImplementedException();
+            _context = context;
+        }
+            
+        public async Task<List<Dealer>> GetAll()
+        {
+            return await _context.Set<Dealer>().ToListAsync();
         }
 
-        public Task<Dealer> GetById(int id)
+        public async Task<Dealer> GetById(int id)
         {
-            throw new System.NotImplementedException();
+            return await _context.Set<Dealer>().FindAsync(id);
         }
 
-        public Task<Dealer> Add(Dealer entity)
+        public async Task<Dealer> Add(Dealer entity)
         {
-            throw new System.NotImplementedException();
+            _context.Set<Dealer>().Add(entity);
+            await _context.SaveChangesAsync();
+            return entity;
         }
 
-        public Task<Dealer> Update(Dealer entity)
+        public async Task<Dealer> Update(Dealer entity)
         {
-            throw new System.NotImplementedException();
+            _context.Entry(entity).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+            return entity;
         }
 
-        public Task<Dealer> Delete(int id)
+        public async Task<Dealer> Delete(int id)
         {
-            throw new System.NotImplementedException();
+            var entity = await _context.Set<Dealer>().FindAsync(id);
+            if (entity == null)
+            {
+                return entity;
+            }
+
+            _context.Set<Dealer>().Remove(entity);
+            await _context.SaveChangesAsync();
+
+            return entity;
         }
     }
 }

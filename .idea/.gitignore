@@ -1,2 +1,5 @@
 # Default ignored files
 /.idea.CarForMe/.idea/workspace.xml
+# Datasource local storage ignored files
+/.idea.CarForMe/.idea/dataSources.local.xml
+/.idea.CarForMe/.idea/dataSources/

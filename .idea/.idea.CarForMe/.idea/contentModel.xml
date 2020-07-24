@@ -3,6 +3,7 @@
   <component name="ContentModelStore">
     <e p="$USER_HOME$/Library/Caches/Rider2019.3/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/Library/Caches/Rider2019.3/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_CarForMe.944617259.00" t="ExcludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
     <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="CarForMe.sln" t="IncludeFlat" />
@@ -12,7 +13,7 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
-          <e p="WeatherForecastController.cs" t="Include" />
+          <e p="DealerController.cs" t="Include" />
         </e>
         <e p="Data" t="Include">
           <e p="CarForMeDbContext.cs" t="Include" />
@@ -20,6 +21,11 @@
         <e p="DealerAPI.csproj" t="IncludeRecursive" />
         <e p="Domain" t="Include">
           <e p="Dealer.cs" t="Include" />
+        </e>
+        <e p="Migrations" t="Include">
+          <e p="20200719022905_AddDealer.cs" t="Include" />
+          <e p="20200719022905_AddDealer.Designer.cs" t="Include" />
+          <e p="CarForMeDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -37,7 +43,6 @@
           <e p="IRepository.cs" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
-        <e p="WeatherForecast.cs" t="Include" />
       </e>
       <e p="src/Services/VehicleAPI" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />

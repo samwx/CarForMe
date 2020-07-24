@@ -18,14 +18,14 @@ namespace DealerAPI.Domain
         public string ImageUrl { get; set; }
         
         [Required]
-        [RegularExpression(@"/^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$/")]
+        [RegularExpression(@"^\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}$")]
         public string Cnpj { get; set; }
         
         [Required]
-        [RegularExpression(@"/^\d{5}\-\d{3}$/")]
+        [RegularExpression(@"^\d{5}\-\d{3}$")]
         public string Cep { get; set; }
         
-        [Required]
+        [Required] 
         public string Address { get; set; }
         
         [Required]
@@ -48,11 +48,11 @@ namespace DealerAPI.Domain
         public string OwnerName { get; set; }
         
         [Required]
-        [RegularExpression(@"/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/")]
+        [RegularExpression(@"^\d{3}\.\d{3}\.\d{3}\-\d{2}$")]
         public string OwnerCpf { get; set; }
         
         [Required]
-        [RegularExpression(@"/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/gi")]
+        [RegularExpression(@"[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$")]
         public string DealerEmail { get; set; }
         
         [Required]
